@@ -9,7 +9,7 @@
 <p>void func(char *p) {<br>    p = (char *)malloc(100);<br>}<br>因为，在这个函数里，只是将系统新建的临时指针指向了新分配的内存。而作为值传递，main中的p指向的地址并没有被改变。</p>
 <p>也就很好理解为什么传递指针的时候可以改变指针的内容。因为虽然是两个指针，但指向了同个地址<br>void func ( int * p ){<br>     <em>p = 2；<br>}<br>int main ( int argc, char *argv[] )<br>{<br>    int a = 1;<br>    int *p = &a;<br>    func(p);<br>    printf(“%d\n”,</em>p);<br>    return EXIT_SUCCESS;<br>}<br>打印：2</p>
 <p>注意：在C语言中都是传值的，传引用是C++的特性</p>
-</div><div class="tags"></div><div class="post-nav"><a class="next" href="/2020/01/27/hello-world/">Hello World</a></div><div id="container"></div><link rel="stylesheet" href="/css/default.css?v=0.0.0"><script src="/js/gitment.browser.js?v=0.0.0"></script><script>var gitment = new Gitment({
+</div><iframe src="/donate/?AliPayQR=null&amp;WeChatQR=/img/WeChatQR.png&amp;GitHub=null&amp;BTCQR=null&amp;BTCKEY=null&amp;PayPal=null" style="overflow-x:hidden; overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;" frameborder="0" scrolling="no"></iframe><div class="tags"></div><div class="post-nav"><a class="next" href="/2020/01/27/hello-world/">Hello World</a></div><div id="container"></div><link rel="stylesheet" href="/css/default.css?v=0.0.0"><script src="/js/gitment.browser.js?v=0.0.0"></script><script>var gitment = new Gitment({
   id: window.location.pathname.substring(1,window.location.pathname.length),
   owner: 'xiaofangzhen',
   repo: 'comment',
