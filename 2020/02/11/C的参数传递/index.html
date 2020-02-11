@@ -9,6 +9,7 @@
 
 <p>运行后可以看到两个&amp;p是不同的，两个p是一样的。也就是在调用func时，系统新建了一个临时指针，这两个临时指针指向同个地方。<br>现在就很好理解为什么前面的程序会段错误。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void func(char *p) &#123;</span><br><span class="line">    p = (char *)malloc(100);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
 <p>因为，在这个函数里，只是将系统新建的临时指针指向了新分配的内存。而作为值传递，main中的p指向的地址并没有被改变。</p>
 <p>也就很好理解为什么传递指针的时候可以改变指针的内容。因为虽然是两个指针，但指向了同个地址</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">void func ( int * p )&#123;</span><br><span class="line">     *p = 2；</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
